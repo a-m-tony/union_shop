@@ -365,3 +365,5 @@ class ProductCard extends StatelessWidget {
     );
   }
 }
+
+// Placeholder for the ProductPage  
