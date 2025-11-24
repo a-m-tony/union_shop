@@ -112,6 +112,13 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.black),
                             ),
                           ),
+                          TextButton(
+                            onPressed: placeholderCallbackForButtons,
+                            child: const Text(
+                              'Sale!',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                          ),
                           const Spacer(),
                           ConstrainedBox(
                             constraints: const BoxConstraints(maxWidth: 600),
