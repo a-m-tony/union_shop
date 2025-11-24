@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/about_us.dart';
 import 'package:union_shop/product_page.dart';
 
 void main() {
@@ -21,7 +22,10 @@ class UnionShopApp extends StatelessWidget {
       initialRoute: '/',
       // When navigating to '/product', build and return the ProductPage
       // In your browser, try this link: http://localhost:49856/#/product
-      routes: {'/product': (context) => const ProductPage()},
+      routes: {
+        '/product': (context) => const ProductPage(),
+        '/about': (context) => const AboutUsPage(),
+      },
     );
   }
 }
@@ -35,6 +39,10 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToProduct(BuildContext context) {
     Navigator.pushNamed(context, '/product');
+  }
+
+  void navigateToAbout(BuildContext context) {
+    Navigator.pushNamed(context, '/about');
   }
 
   void placeholderCallbackForButtons() {
@@ -117,6 +125,13 @@ class HomeScreen extends StatelessWidget {
                             child: const Text(
                               'Sale!',
                               style: TextStyle(color: Colors.red),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () => navigateToAbout(context),
+                            child: const Text(
+                              'About',
+                              style: TextStyle(color: Colors.black),
                             ),
                           ),
                           const Spacer(),
@@ -207,7 +222,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.7),
+                          color: Colors.black.withOpacity(0.7),
                         ),
                       ),
                     ),
