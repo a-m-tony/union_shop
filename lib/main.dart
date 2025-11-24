@@ -98,6 +98,13 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.black),
                             ),
                           ),
+                          TextButton(
+                            onPressed: () => navigateToProduct(context),
+                            child: const Text(
+                              'Shop',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
                           const Spacer(),
                           ConstrainedBox(
                             constraints: const BoxConstraints(maxWidth: 600),
