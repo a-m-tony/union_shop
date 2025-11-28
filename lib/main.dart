@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about_us.dart';
+import 'package:union_shop/clothing_page.dart';
+import 'package:union_shop/graduation_page.dart';
+import 'package:union_shop/merchandise_page.dart';
+import 'package:union_shop/portsmouth_collection_page.dart';
+import 'package:union_shop/pride_collection_page.dart';
 import 'package:union_shop/product_page.dart';
-import 'package:union_shop/shop_modal.dart';
+import 'package:union_shop/shop_menu.dart';
+import 'package:union_shop/signal_essentials_page.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -26,6 +32,12 @@ class UnionShopApp extends StatelessWidget {
       routes: {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutUsPage(),
+        '/clothing': (context) => const ClothingPage(),
+        '/merchandise': (context) => const MerchandisePage(),
+        '/signal-essentials': (context) => const SignalEssentialsPage(),
+        '/portsmouth-collection': (context) => const PortsmouthCollectionPage(),
+        '/pride-collection': (context) => const PrideCollectionPage(),
+        '/graduation': (context) => const GraduationPage(),
       },
     );
   }
@@ -103,20 +115,7 @@ class HomeScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.black),
                             ),
                           ),
-                          TextButton(
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return const ShopModal();
-                                },
-                              );
-                            },
-                            child: const Text(
-                              'Shop',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
+                          const ShopMenu(),
                           TextButton(
                             onPressed: placeholderCallbackForButtons,
                             child: const Text(
@@ -261,12 +260,7 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 32),
                         ElevatedButton(
                           onPressed: () {
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return const ShopModal();
-                              },
-                            );
+                            // This will be replaced with a PopupMenuButton
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF4d2963),
