@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about_us.dart';
 import 'package:union_shop/product_page.dart';
+import 'package:union_shop/shop_modal.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -35,10 +36,6 @@ class HomeScreen extends StatelessWidget {
 
   void navigateToHome(BuildContext context) {
     Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-  }
-
-  void navigateToProduct(BuildContext context) {
-    Navigator.pushNamed(context, '/product');
   }
 
   void navigateToAbout(BuildContext context) {
@@ -107,7 +104,14 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           TextButton(
-                            onPressed: () => navigateToProduct(context),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return const ShopModal();
+                                },
+                              );
+                            },
                             child: const Text(
                               'Shop',
                               style: TextStyle(color: Colors.black),
@@ -256,7 +260,14 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 32),
                         ElevatedButton(
-                          onPressed: () => navigateToProduct(context),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return const ShopModal();
+                              },
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF4d2963),
                             foregroundColor: Colors.white,
