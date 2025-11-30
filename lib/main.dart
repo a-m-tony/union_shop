@@ -10,6 +10,7 @@ import 'package:union_shop/shop_dropdown/shop_menu.dart';
 import 'package:union_shop/shop_dropdown/signal_essentials_page.dart';
 import 'About.dart';
 import 'Personalisation.dart';
+import 'header.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -229,7 +230,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
+            const Header(),
             // Hero Section
             SizedBox(
               height: 400,
