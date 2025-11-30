@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
       height: 100,
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/header_img.png'),
+          image: AssetImage('images/header_img.png'),
           fit: BoxFit.cover,
         ),
       ),
