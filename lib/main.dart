@@ -8,6 +8,8 @@ import 'package:union_shop/shop_dropdown/portsmouth_collection_page.dart';
 import 'package:union_shop/shop_dropdown/pride_collection_page.dart';
 import 'package:union_shop/shop_dropdown/shop_menu.dart';
 import 'package:union_shop/shop_dropdown/signal_essentials_page.dart';
+import 'About.dart';
+import 'Personalisation.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -38,6 +40,8 @@ class UnionShopApp extends StatelessWidget {
         '/portsmouth-collection': (context) => const PortsmouthCollectionPage(),
         '/pride-collection': (context) => const PrideCollectionPage(),
         '/graduation': (context) => const GraduationPage(),
+        '/about-print-snack': (context) => const AboutPrintSnackPage(),
+        '/personalisation': (context) => const PersonalisationPage(),
       },
     );
   }
@@ -116,8 +120,27 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           const ShopMenu(),
-                          TextButton(
-                            onPressed: placeholderCallbackForButtons,
+                          PopupMenuButton<String>(
+                            onSelected: (String result) {
+                              switch (result) {
+                                case 'About':
+                                  Navigator.pushNamed(context, '/about-print-snack');
+                                  break;
+                                case 'Personalisation':
+                                  Navigator.pushNamed(context, '/personalisation');
+                                  break;
+                              }
+                            },
+                            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
+                              const PopupMenuItem<String>(
+                                value: 'About',
+                                child: Text('About'),
+                              ),
+                              const PopupMenuItem<String>(
+                                value: 'Personalisation',
+                                child: Text('Personalisation'),
+                              ),
+                            ],
                             child: const Text(
                               'The Print Snack',
                               style: TextStyle(color: Colors.black),
