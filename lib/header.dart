@@ -6,7 +6,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 100,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/header_img.png'),
