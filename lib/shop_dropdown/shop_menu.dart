@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'clothing_page.dart';
-import 'merchandise_page.dart';
-import 'signal_essentials_page.dart';
-import 'portsmouth_collection_page.dart';
-import 'pride_collection_page.dart';
-import 'graduation_page.dart';
 
 class ShopMenu extends StatelessWidget {
   const ShopMenu({super.key});
