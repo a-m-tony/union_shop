@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/clothing_page.dart';
-import 'package:union_shop/merchandise_page.dart';
-import 'package:union_shop/signal_essentials_page.dart';
-import 'package:union_shop/portsmouth_collection_page.dart';
-import 'package:union_shop/pride_collection_page.dart';
-import 'package:union_shop/graduation_page.dart';
+import 'clothing_page.dart';
+import 'merchandise_page.dart';
+import 'signal_essentials_page.dart';
+import 'portsmouth_collection_page.dart';
+import 'pride_collection_page.dart';
+import 'graduation_page.dart';
 
 class ShopMenu extends StatelessWidget {
   const ShopMenu({super.key});
@@ -15,40 +15,22 @@ class ShopMenu extends StatelessWidget {
       onSelected: (String result) {
         switch (result) {
           case 'Clothing':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const ClothingPage()),
-            );
+            Navigator.pushNamed(context, '/clothing');
             break;
           case 'Merchandise':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const MerchandisePage()),
-            );
+            Navigator.pushNamed(context, '/merchandise');
             break;
           case 'Signal & Essential Range':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SignalEssentialsPage()),
-            );
+            Navigator.pushNamed(context, '/signal-essentials');
             break;
           case 'Portsmouth Collection':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const PortsmouthCollectionPage()),
-            );
+            Navigator.pushNamed(context, '/portsmouth-collection');
             break;
           case 'Pride Collection':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const PrideCollectionPage()),
-            );
+            Navigator.pushNamed(context, '/pride-collection');
             break;
           case 'Graduation':
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const GraduationPage()),
-            );
+            Navigator.pushNamed(context, '/graduation');
             break;
         }
       },

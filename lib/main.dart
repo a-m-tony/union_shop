@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about_us.dart';
-import 'package:union_shop/clothing_page.dart';
-import 'package:union_shop/graduation_page.dart';
-import 'package:union_shop/merchandise_page.dart';
-import 'package:union_shop/portsmouth_collection_page.dart';
-import 'package:union_shop/pride_collection_page.dart';
 import 'package:union_shop/product_page.dart';
-import 'package:union_shop/shop_menu.dart';
-import 'package:union_shop/signal_essentials_page.dart';
+import 'package:union_shop/shop_dropdown/clothing_page.dart';
+import 'package:union_shop/shop_dropdown/graduation_page.dart';
+import 'package:union_shop/shop_dropdown/merchandise_page.dart';
+import 'package:union_shop/shop_dropdown/portsmouth_collection_page.dart';
+import 'package:union_shop/shop_dropdown/pride_collection_page.dart';
+import 'package:union_shop/shop_dropdown/shop_menu.dart';
+import 'package:union_shop/shop_dropdown/signal_essentials_page.dart';
 
 void main() {
   runApp(const UnionShopApp());
