@@ -416,6 +416,13 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text(
+                        '(Term Time)',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
