@@ -409,6 +409,13 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text(
+                        '-----------------------',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
