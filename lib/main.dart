@@ -376,7 +376,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Opening Hours',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -390,7 +390,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Help and Information',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -404,7 +404,7 @@ class HomeScreen extends StatelessWidget {
                         Text(
                           'Latest Offers',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
