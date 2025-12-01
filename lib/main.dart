@@ -388,6 +388,13 @@ class HomeScreen extends StatelessWidget {
                           fontStyle: FontStyle.italic,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Closing 4pm 19/12/2025',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
