@@ -402,9 +402,9 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
-                                            SizedBox(height: 8),
+                      SizedBox(height: 8),
                       Text(
-                        'Last', 
+                        'Last post date: 12 pm on 18/12/2025',
                         style: TextStyle(
                           fontSize: 12,
                         ),
