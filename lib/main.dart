@@ -264,7 +264,7 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Text(
-                          'Placeholder Hero Title',
+                          'Essential Range - Over 20 % off',
                           style: TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
