@@ -395,6 +395,20 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Reopening 10am 5/01/2026',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                                            SizedBox(height: 8),
+                      Text(
+                        'Last', 
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
