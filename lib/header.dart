@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/print_snack_menu.dart';
+import 'package:union_shop/shop_dropdown/shop_menu.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -65,20 +67,9 @@ class Header extends StatelessWidget {
                         child: const Text('The Union'),
                       ),
                       const SizedBox(width: 20),
-                      TextButton(
-                        onPressed: placeholderCallbackForButtons,
-                        child: const Text('Shop'),
-                      ),
+                      const ShopMenu(),
                       const SizedBox(width: 20),
-                      TextButton(
-                        onPressed: placeholderCallbackForButtons,
-                        child: const Text('The Print Snack'),
-                      ),
-                      const SizedBox(width: 20),
-                      TextButton(
-                        onPressed: placeholderCallbackForButtons,
-                        child: const Text('Snack'),
-                      ),
+                      const PrintSnackMenu(),
                       const SizedBox(width: 20),
                       TextButton(
                         onPressed: placeholderCallbackForButtons,

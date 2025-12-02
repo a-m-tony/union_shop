@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AboutPrintSnackPage extends StatelessWidget {
@@ -11,7 +10,7 @@ class AboutPrintSnackPage extends StatelessWidget {
         title: const Text('About The Print Snack'),
       ),
       body: const Center(
-        child: Text('This is the About page for The Print Snack.'),
+        child: Text('This is the About The Print Snack page.'),
       ),
     );
   }
