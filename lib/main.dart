@@ -423,6 +423,20 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text(
+                        'Monday - Friday 10am - 4pm',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                      SizedBox(height: 8),
+                      Text(
+                        '(Outside of Term Time / Consolidation Weeks)',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
