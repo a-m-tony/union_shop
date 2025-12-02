@@ -70,166 +70,6 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             // Header
-            Container(
-              height: 100,
-              color: Colors.white,
-              child: Column(
-                children: [
-                  // Top banner
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    color: const Color(0xFF4d2963),
-                    child: const Text(
-                      'Essential Range - Over 20 % off',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                  ),
-                  // Main header
-                  Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Row(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              navigateToHome(context);
-                            },
-                            child: Image.network(
-                              'https://shop.upsu.net/cdn/shop/files/upsu_300x300.png?v=1614735854',
-                              height: 18,
-                              fit: BoxFit.cover,
-                              errorBuilder: (context, error, stackTrace) {
-                                return Container(
-                                  color: Colors.grey[300],
-                                  width: 18,
-                                  height: 18,
-                                  child: const Center(
-                                    child: Icon(Icons.image_not_supported,
-                                        color: Colors.grey),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () => navigateToHome(context),
-                            child: const Text(
-                              'Home',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          const ShopMenu(),
-                          const SizedBox(width: 20),
-                          PopupMenuButton<String>(
-                            onSelected: (String result) {
-                              switch (result) {
-                                case 'About':
-                                  Navigator.pushNamed(context, '/about-print-snack');
-                                  break;
-                                case 'Personalisation':
-                                  Navigator.pushNamed(context, '/personalisation');
-                                  break;
-                              }
-                            },
-                            itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
-                              const PopupMenuItem<String>(
-                                value: 'About',
-                                child: Text('About'),
-                              ),
-                              const PopupMenuItem<String>(
-                                value: 'Personalisation',
-                                child: Text('Personalisation'),
-                              ),
-                            ],
-                            child: const Text(
-                              'The Print Snack',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: placeholderCallbackForButtons,
-                            child: const Text(
-                              'Sale!',
-                              style: TextStyle(color: Colors.red),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () => navigateToAbout(context),
-                            child: const Text(
-                              'About',
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                          const Spacer(),
-                          ConstrainedBox(
-                            constraints: const BoxConstraints(maxWidth: 600),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.search,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.person_outline,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.shopping_bag_outlined,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.menu,
-                                    size: 18,
-                                    color: Colors.grey,
-                                  ),
-                                  padding: const EdgeInsets.all(8),
-                                  constraints: const BoxConstraints(
-                                    minWidth: 32,
-                                    minHeight: 32,
-                                  ),
-                                  onPressed: placeholderCallbackForButtons,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
             const Header(),
             // Hero Section
             SizedBox(
@@ -462,6 +302,14 @@ class HomeScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text('Contact Us', style: TextStyle(fontSize: 12)),
+                      SizedBox(height: 8),
+                      Text('Delivery Information', style: TextStyle(fontSize: 12)),
+                      SizedBox(height: 8),
+                      Text('Returns and Refunds', style: TextStyle(fontSize: 12)),
+                      SizedBox(height: 8),
+                      Text('FAQs', style: TextStyle(fontSize: 12)),
                     ],
                   ),
                   SizedBox(width: 20),
@@ -475,8 +323,11 @@ class HomeScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      SizedBox(height: 8),
+                      Text('Check out our latest deals!', style: TextStyle(fontSize: 12)),
                     ],
                   ),
+                  Spacer(),
                 ],
               ),
             ),
