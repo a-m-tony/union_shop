@@ -72,7 +72,7 @@ class Header extends StatelessWidget {
                       const SizedBox(width: 20),
                       TextButton(
                         onPressed: placeholderCallbackForButtons,
-                        child: const Text('The Print'),
+                        child: const Text('The Print Snack'),
                       ),
                       const SizedBox(width: 20),
                       TextButton(
