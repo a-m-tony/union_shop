@@ -14,6 +14,9 @@ class ShopMenu extends StatelessWidget {
           case 'Merchandise':
             Navigator.pushNamed(context, '/merchandise');
             break;
+          case 'Halloween':
+            Navigator.pushNamed(context, '/halloween');
+            break;
           case 'Signal & Essential Range':
             Navigator.pushNamed(context, '/signal-essentials');
             break;
@@ -38,6 +41,10 @@ class ShopMenu extends StatelessWidget {
           child: Text('Merchandise'),
         ),
         const PopupMenuItem<String>(
+          value: 'Halloween',
+          child: Text('Halloween'),
+        ),
+        const PopupMenuItem<String>(
           value: 'Signal & Essential Range',
           child: Text('Signal & Essential Range'),
         ),
@@ -54,9 +61,14 @@ class ShopMenu extends StatelessWidget {
           child: Text('Graduation'),
         ),
       ],
-      child: const Text(
-        'Shop',
-        style: TextStyle(color: Colors.black),
+      child: const Row(
+        children: [
+          Text(
+            'Shop',
+            style: TextStyle(color: Colors.black),
+          ),
+          Icon(Icons.arrow_drop_down, color: Colors.black),
+        ],
       ),
     );
   }

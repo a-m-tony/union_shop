@@ -3,6 +3,7 @@ import 'package:union_shop/about_us.dart';
 import 'package:union_shop/product_page.dart';
 import 'package:union_shop/shop_dropdown/clothing_page.dart';
 import 'package:union_shop/shop_dropdown/graduation_page.dart';
+import 'package:union_shop/shop_dropdown/halloween_page.dart';
 import 'package:union_shop/shop_dropdown/merchandise_page.dart';
 import 'package:union_shop/shop_dropdown/portsmouth_collection_page.dart';
 import 'package:union_shop/shop_dropdown/pride_collection_page.dart';
@@ -28,15 +29,13 @@ class UnionShopApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF4d2963)),
       ),
       home: const HomeScreen(),
-      // By default, the app starts at the '/' route, which is the HomeScreen
       initialRoute: '/',
-      // When navigating to '/product', build and return the ProductPage
-      // In your browser, try this link: http://localhost:49856/#/product
       routes: {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutUsPage(),
         '/clothing': (context) => const ClothingPage(),
         '/merchandise': (context) => const MerchandisePage(),
+        '/halloween': (context) => const HalloweenPage(),
         '/signal-essentials': (context) => const SignalEssentialsPage(),
         '/portsmouth-collection': (context) => const PortsmouthCollectionPage(),
         '/pride-collection': (context) => const PrideCollectionPage(),
@@ -69,15 +68,12 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Header
             const Header(),
-            // Hero Section
             SizedBox(
               height: 400,
               width: double.infinity,
               child: Stack(
                 children: [
-                  // Background image
                   Positioned.fill(
                     child: Container(
                       decoration: const BoxDecoration(
@@ -95,7 +91,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Content overlay
                   Positioned(
                     left: 24,
                     right: 24,
@@ -123,30 +118,13 @@ class HomeScreen extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 32),
-                        ElevatedButton(
-                          onPressed: () {
-                            // This will be replaced with a PopupMenuButton
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF4d2963),
-                            foregroundColor: Colors.white,
-                            shape: const RoundedRectangleBorder(
-                              borderRadius: BorderRadius.zero,
-                            ),
-                          ),
-                          child: const Text(
-                            'BROWSE PRODUCTS',
-                            style: TextStyle(fontSize: 14, letterSpacing: 1),
-                          ),
-                        ),
+                        const ShopMenu(),
                       ],
                     ),
                   ),
                 ],
               ),
             ),
-
-            // Products Section
             Container(
               color: Colors.white,
               child: Padding(
@@ -200,8 +178,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            // Footer
             Container(
               width: double.infinity,
               color: Colors.grey[50],
