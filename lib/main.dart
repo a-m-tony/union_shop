@@ -65,7 +65,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var Outside;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -406,7 +405,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(height: 8),
                       Text(
                         'Last post date: 12 pm on 18/12/2025',
-(Outside of Term Time / Consolidation Weeks)                        style: TextStyle(
+                        style: TextStyle(
                           fontSize: 12,
                         ),
                       ),
@@ -420,13 +419,6 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(height: 8),
                       Text(
                         '(Term Time)',
-                        style: TextStyle(
-                          fontSize: 12,
-                        ),
-                      ),
-SizedBox(height: 8),
-                      Text(
-                        'Monday - Friday 10am - 4pm',
                         style: TextStyle(
                           fontSize: 12,
                         ),
