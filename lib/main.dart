@@ -437,6 +437,18 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 12,
                         ),
                       ),
+                      Text(
+                        'Monday - Friday 10am - 3pm',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
+                                            Text(
+                        ' Purchase online 24/7',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(width: 20),
