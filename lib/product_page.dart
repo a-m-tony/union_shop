@@ -326,7 +326,7 @@ class ProductPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 8),
-                      Text('Contact Us', style: TextStyle(fontSize: 12)),
+                      Text('Search', style: TextStyle(fontSize: 12)),
                       SizedBox(height: 8),
                       Text('Delivery Information', style: TextStyle(fontSize: 12)),
                       SizedBox(height: 8),
