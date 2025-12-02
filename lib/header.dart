@@ -57,6 +57,41 @@ class Header extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('The Union'),
+                      ),
+                      const SizedBox(width: 20),
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('Shop'),
+                      ),
+                      const SizedBox(width: 20),
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('The Print'),
+                      ),
+                      const SizedBox(width: 20),
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('Snack'),
+                      ),
+                      const SizedBox(width: 20),
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('Sale'),
+                      ),
+                      const SizedBox(width: 20),
+                      TextButton(
+                        onPressed: placeholderCallbackForButtons,
+                        child: const Text('About'),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
                   ConstrainedBox(
                     constraints: const BoxConstraints(maxWidth: 600),
                     child: Row(
