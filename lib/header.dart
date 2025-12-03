@@ -79,6 +79,11 @@ class Header extends StatelessWidget {
                           child: const Text('The Union'),
                         ),
                         const SizedBox(width: 20),
+                        TextButton(
+                          onPressed: () => navigateToHome(context),
+                          child: const Text('Home'),
+                        ),
+                        const SizedBox(width: 20),
                         const ShopMenu(),
                         const SizedBox(width: 20),
                         const PrintSnackMenu(),
