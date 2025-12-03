@@ -19,7 +19,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'assets/images/clothes7.jpeg',
+                      'assets/images/clothing.jpeg',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -28,7 +28,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/clothing3.png',
+                      'assets/images/clothing3.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -37,40 +37,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/hat.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: [
-                Expanded(
-                  child: Card(
-                    clipBehavior: Clip.antiAlias,
-                    child: Image.asset(
-                      'images/clothing2.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Card(
-                    clipBehavior: Clip.antiAlias,
-                    child: Image.asset(
-                      'images/clothing.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Card(
-                    clipBehavior: Clip.antiAlias,
-                    child: Image.asset(
-                      'images/hat2.png',
+                      'assets/images/hat.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -85,7 +52,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/clothing4.png',
+                      'assets/images/clothing2.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -94,7 +61,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/clothing4.png',
+                      'assets/images/clothing.png',
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -103,7 +70,40 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/hat1.png',
+                      'assets/images/hat2.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Column(
+              children: [
+                Expanded(
+                  child: Card(
+                    clipBehavior: Clip.antiAlias,
+                    child: Image.asset(
+                      'assets/images/clothing4.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    clipBehavior: Clip.antiAlias,
+                    child: Image.asset(
+                      'assets/images/clothing4.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Card(
+                    clipBehavior: Clip.antiAlias,
+                    child: Image.asset(
+                      'assets/images/hat1.png',
                       fit: BoxFit.cover,
                     ),
                   ),
