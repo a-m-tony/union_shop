@@ -20,7 +20,7 @@ class ClothingPage extends StatelessWidget {
                       Card(
                         clipBehavior: Clip.antiAlias,
                         child: Image.asset(
-                          'assets/images/clothing.jpeg',
+                          'assets/images/clothing.png',
                           fit: BoxFit.cover,
                         ),
                       ),
