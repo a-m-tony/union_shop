@@ -9,6 +9,10 @@ class Header extends StatelessWidget {
     Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
   }
 
+  void navigateToSale(BuildContext context) {
+    Navigator.pushNamed(context, '/sale');
+  }
+
   void placeholderCallbackForButtons() {
     // This is the event handler for buttons that don't work yet
   }
@@ -72,7 +76,7 @@ class Header extends StatelessWidget {
                       const PrintSnackMenu(),
                       const SizedBox(width: 20),
                       TextButton(
-                        onPressed: placeholderCallbackForButtons,
+                        onPressed: () => navigateToSale(context),
                         child: const Text('Sale'),
                       ),
                       const SizedBox(width: 20),
