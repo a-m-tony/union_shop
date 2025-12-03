@@ -29,6 +29,9 @@ class ShopMenu extends StatelessWidget {
           case 'Graduation':
             Navigator.pushNamed(context, '/graduation');
             break;
+          case 'Personalisation':
+            Navigator.pushNamed(context, '/personalisation');
+            break;
         }
       },
       itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
@@ -59,6 +62,10 @@ class ShopMenu extends StatelessWidget {
         const PopupMenuItem<String>(
           value: 'Graduation',
           child: Text('Graduation'),
+        ),
+        const PopupMenuItem<String>(
+          value: 'Personalisation',
+          child: Text('Personalisation'),
         ),
       ],
       child: const Row(

@@ -11,8 +11,8 @@ import 'package:union_shop/shop_dropdown/pride_collection_page.dart';
 import 'package:union_shop/shop_dropdown/shop_menu.dart';
 import 'package:union_shop/shop_dropdown/signal_essentials_page.dart';
 import 'About.dart';
-import 'Personalisation.dart';
 import 'header.dart';
+import 'shop_dropdown/Personalisation.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -192,7 +192,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Opening Hours',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -200,7 +200,7 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(height: 8),
                       Text(
                         '❄️ Winter Break Closure ❄️',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.bold,
                           fontStyle: FontStyle.italic,
@@ -209,61 +209,61 @@ class HomeScreen extends StatelessWidget {
                       SizedBox(height: 8),
                       Text(
                         'Closing 4pm 19/12/2025',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         'Reopening 10am 5/01/2026',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         'Last post date: 12 pm on 18/12/2025',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         '-----------------------',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         '(Term Time)',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         'Monday - Friday 10am - 4pm',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
                         '(Outside of Term Time / Consolidation Weeks)',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                       Text(
                         'Monday - Friday 10am - 3pm',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
                                             Text(
                         ' Purchase online 24/7',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                         ),
                       ),
@@ -275,19 +275,19 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Help and Information',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 8),
-                      Text('Search', style: TextStyle(fontSize: 12)),
+                      Text('Search', style: const TextStyle(fontSize: 12)),
                       SizedBox(height: 8),
-                      Text('Delivery Information', style: TextStyle(fontSize: 12)),
+                      Text('Delivery Information', style: const TextStyle(fontSize: 12)),
                       SizedBox(height: 8),
-                      Text('Returns and Refunds', style: TextStyle(fontSize: 12)),
+                      Text('Returns and Refunds', style: const TextStyle(fontSize: 12)),
                       SizedBox(height: 8),
-                      Text('FAQs', style: TextStyle(fontSize: 12)),
+                      Text('FAQs', style: const TextStyle(fontSize: 12)),
                     ],
                   ),
                   SizedBox(width: 20),
@@ -296,13 +296,13 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Latest Offers',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 8),
-                      Text('Check out our latest deals!', style: TextStyle(fontSize: 12)),
+                      Text('Check out our latest deals!', style: const TextStyle(fontSize: 12)),
                     ],
                   ),
                   Spacer(),
