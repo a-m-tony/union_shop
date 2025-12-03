@@ -103,7 +103,7 @@ class ClothingPage extends StatelessWidget {
                   child: Card(
                     clipBehavior: Clip.antiAlias,
                     child: Image.asset(
-                      'images/hat3.png',
+                      'images/hat1.png',
                       fit: BoxFit.cover,
                     ),
                   ),
