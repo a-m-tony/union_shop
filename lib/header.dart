@@ -38,7 +38,7 @@ class Header extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 8),
             color: const Color(0xFF4d2963),
             child: const Text(
-              'PLACEHOLDER HEADER TEXT',
+              'PLACEHOLDER HEADER TEXT - STUDENTS TO UPDATE!',
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
@@ -71,28 +71,21 @@ class Header extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 10.0,
+                      runSpacing: 4.0,
                       children: [
-                        TextButton(
-                          onPressed: placeholderCallbackForButtons,
-                          child: const Text('The Union'),
-                        ),
-                        const SizedBox(width: 10),
                         TextButton(
                           onPressed: () => navigateToHome(context),
                           child: const Text('Home'),
                         ),
-                        const SizedBox(width: 10),
                         const ShopMenu(),
-                        const SizedBox(width: 10),
                         const PrintSnackMenu(),
-                        const SizedBox(width: 10),
                         TextButton(
                           onPressed: () => navigateToSale(context),
                           child: const Text('Sale'),
                         ),
-                        const SizedBox(width: 10),
                         TextButton(
                           onPressed: () => navigateToAboutUs(context),
                           child: const Text('About'),
