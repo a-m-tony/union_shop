@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/about_us_page.dart';
 import 'package:union_shop/print_snack_menu.dart';
 import 'package:union_shop/shop_dropdown/shop_menu.dart';
 
@@ -11,6 +12,13 @@ class Header extends StatelessWidget {
 
   void navigateToSale(BuildContext context) {
     Navigator.pushNamed(context, '/sale');
+  }
+
+  void navigateToAboutUs(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const AboutUsPage()),
+    );
   }
 
   void placeholderCallbackForButtons() {
@@ -62,90 +70,87 @@ class Header extends StatelessWidget {
                       },
                     ),
                   ),
-                  const Spacer(),
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      TextButton(
-                        onPressed: placeholderCallbackForButtons,
-                        child: const Text('The Union'),
-                      ),
-                      const SizedBox(width: 20),
-                      const ShopMenu(),
-                      const SizedBox(width: 20),
-                      const PrintSnackMenu(),
-                      const SizedBox(width: 20),
-                      TextButton(
-                        onPressed: () => navigateToSale(context),
-                        child: const Text('Sale'),
-                      ),
-                      const SizedBox(width: 20),
-                      TextButton(
-                        onPressed: placeholderCallbackForButtons,
-                        child: const Text('About'),
-                      ),
-                    ],
-                  ),
-                  const Spacer(),
-                  ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 600),
+                  Expanded(
                     child: Row(
-                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(
-                          icon: const Icon(
-                            Icons.search,
-                            size: 18,
-                            color: Colors.grey,
-                          ),
-                          padding: const EdgeInsets.all(8),
-                          constraints: const BoxConstraints(
-                            minWidth: 32,
-                            minHeight: 32,
-                          ),
+                        TextButton(
                           onPressed: placeholderCallbackForButtons,
+                          child: const Text('The Union'),
                         ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.person_outline,
-                            size: 18,
-                            color: Colors.grey,
-                          ),
-                          padding: const EdgeInsets.all(8),
-                          constraints: const BoxConstraints(
-                            minWidth: 32,
-                            minHeight: 32,
-                          ),
-                          onPressed: placeholderCallbackForButtons,
+                        const SizedBox(width: 20),
+                        const ShopMenu(),
+                        const SizedBox(width: 20),
+                        const PrintSnackMenu(),
+                        const SizedBox(width: 20),
+                        TextButton(
+                          onPressed: () => navigateToSale(context),
+                          child: const Text('Sale'),
                         ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.shopping_bag_outlined,
-                            size: 18,
-                            color: Colors.grey,
-                          ),
-                          padding: const EdgeInsets.all(8),
-                          constraints: const BoxConstraints(
-                            minWidth: 32,
-                            minHeight: 32,
-                          ),
-                          onPressed: placeholderCallbackForButtons,
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.menu,
-                            size: 18,
-                            color: Colors.grey,
-                          ),
-                          padding: const EdgeInsets.all(8),
-                          constraints: const BoxConstraints(
-                            minWidth: 32,
-                            minHeight: 32,
-                          ),
-                          onPressed: placeholderCallbackForButtons,
+                        const SizedBox(width: 20),
+                        TextButton(
+                          onPressed: () => navigateToAboutUs(context),
+                          child: const Text('About'),
                         ),
                       ],
                     ),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: const Icon(
+                          Icons.search,
+                          size: 18,
+                          color: Colors.grey,
+                        ),
+                        padding: const EdgeInsets.all(8),
+                        constraints: const BoxConstraints(
+                          minWidth: 32,
+                          minHeight: 32,
+                        ),
+                        onPressed: placeholderCallbackForButtons,
+                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.person_outline,
+                          size: 18,
+                          color: Colors.grey,
+                        ),
+                        padding: const EdgeInsets.all(8),
+                        constraints: const BoxConstraints(
+                          minWidth: 32,
+                          minHeight: 32,
+                        ),
+                        onPressed: placeholderCallbackForButtons,
+                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.shopping_bag_outlined,
+                          size: 18,
+                          color: Colors.grey,
+                        ),
+                        padding: const EdgeInsets.all(8),
+                        constraints: const BoxConstraints(
+                          minWidth: 32,
+                          minHeight: 32,
+                        ),
+                        onPressed: placeholderCallbackForButtons,
+                      ),
+                      IconButton(
+                        icon: const Icon(
+                          Icons.menu,
+                          size: 18,
+                          color: Colors.grey,
+                        ),
+                        padding: const EdgeInsets.all(8),
+                        constraints: const BoxConstraints(
+                          minWidth: 32,
+                          minHeight: 32,
+                        ),
+                        onPressed: placeholderCallbackForButtons,
+                      ),
+                    ],
                   ),
                 ],
               ),
