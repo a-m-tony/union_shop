@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:union_shop/about_us.dart';
 import 'package:union_shop/product_page.dart';
+import 'package:union_shop/sale_page.dart';
 import 'package:union_shop/shop_dropdown/clothing_page.dart';
 import 'package:union_shop/shop_dropdown/graduation_page.dart';
 import 'package:union_shop/shop_dropdown/halloween_page.dart';
@@ -42,6 +43,7 @@ class UnionShopApp extends StatelessWidget {
         '/graduation': (context) => const GraduationPage(),
         '/about-print-snack': (context) => const AboutPrintSnackPage(),
         '/personalisation': (context) => const PersonalisationPage(),
+        '/sale': (context) => const SalePage(),
       },
     );
   }
