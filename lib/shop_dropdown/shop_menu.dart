@@ -17,15 +17,6 @@ class ShopMenu extends StatelessWidget {
           case 'Collection':
             Navigator.pushNamed(context, '/collection');
             break;
-          case 'Signal & Essential Range':
-            Navigator.pushNamed(context, '/signal-essentials');
-            break;
-          case 'Portsmouth Collection':
-            Navigator.pushNamed(context, '/portsmouth-collection');
-            break;
-          case 'Pride Collection':
-            Navigator.pushNamed(context, '/pride-collection');
-            break;
           case 'Graduation':
             Navigator.pushNamed(context, '/graduation');
             break;
@@ -46,18 +37,6 @@ class ShopMenu extends StatelessWidget {
         const PopupMenuItem<String>(
           value: 'Collection',
           child: Text('Collection'),
-        ),
-        const PopupMenuItem<String>(
-          value: 'Signal & Essential Range',
-          child: Text('Signal & Essential Range'),
-        ),
-        const PopupMenuItem<String>(
-          value: 'Portsmouth Collection',
-          child: Text('Portsmouth Collection'),
-        ),
-        const PopupMenuItem<String>(
-          value: 'Pride Collection',
-          child: Text('Pride Collection'),
         ),
         const PopupMenuItem<String>(
           value: 'Graduation',
