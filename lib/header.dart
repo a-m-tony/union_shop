@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/about_us_page.dart';
-import 'package:union_shop/print_snack_menu.dart';
 import 'package:union_shop/shop_dropdown/shop_menu.dart';
+import 'package:union_shop/print_snack_menu.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -14,11 +13,12 @@ class Header extends StatelessWidget {
     Navigator.pushNamed(context, '/sale');
   }
 
-  void navigateToAboutUs(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const AboutUsPage()),
-    );
+  void navigateToAbout(BuildContext context) {
+    Navigator.pushNamed(context, '/about');
+  }
+
+  void navigateToThePrintSnack(BuildContext context) {
+    Navigator.pushNamed(context, '/about-print-snack');
   }
 
   void placeholderCallbackForButtons() {
@@ -85,9 +85,9 @@ class Header extends StatelessWidget {
                         child: const Text('Sale'),
                       ),
                       TextButton(
-                        onPressed: () => navigateToAboutUs(context),
+                        onPressed: () => navigateToAbout(context),
                         child: const Text('About'),
-                        ),
+                      ),
                     ],
                   ),
                   Row(
