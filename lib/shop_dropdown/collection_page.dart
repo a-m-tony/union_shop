@@ -22,18 +22,18 @@ class CollectionPage extends StatelessWidget {
                 mainAxisSpacing: 48,
                 children: const [
                   ProductCard(
-                    title: 'Clothing',
+                    title: 't shirt',
                     price: '£10.00',
                     imageUrl: 'assets/images/clothing.png',
                   ),
                   ProductCard(
-                    title: 'Clothing 2',
-                    price: '£15.00',
+                    title: 't shirt',
+                    price: '£10.00',
                     imageUrl: 'assets/images/clothing2.png',
                   ),
                   ProductCard(
-                    title: 'Clothing 3',
-                    price: '£20.00',
+                    title: 't shirt',
+                    price: '£10.00',
                     imageUrl: 'assets/images/clothing3.png',
                   ),
                 ],
