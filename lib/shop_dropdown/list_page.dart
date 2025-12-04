@@ -3,6 +3,9 @@ import '../header.dart';
 import '../product_card.dart';
 import '../model/product.dart';
 import '../repository/price.dart';
+import '../model/hoodie.dart';
+import '../model/sweater.dart';
+import '../model/t_shirt.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({super.key});
@@ -14,62 +17,62 @@ class ListPage extends StatelessWidget {
       Product(
         title: 't shirts',
         price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
-        imageUrl: 'assets/images/sweater1.png',
+        imageUrl: TShirt.clothing.image,
       ),
       Product(
         title: 'Sweater 4',
         price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
-        imageUrl: 'assets/images/sweater4.PNG',
+        imageUrl: Sweater.sweater4.image,
       ),
       Product(
         title: 'Sweater 3',
         price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
-        imageUrl: 'assets/images/sweater3.png',
+        imageUrl: Sweater.sweater3.image,
       ),
       Product(
         title: 'Sweater 2',
         price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
-        imageUrl: 'assets/images/sweater2.png',
+        imageUrl: Sweater.sweater2.image,
       ),
       Product(
         title: 'hoodie',
         price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
-        imageUrl: 'assets/images/hoodie1.png',
+        imageUrl: Hoodie.hoodie1.image,
       ),
       Product(
         title: 't shirts',
         price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
-        imageUrl: 'assets/images/clothing3.png',
+        imageUrl: TShirt.clothing4.image,
       ),
       Product(
         title: 't shirts',
         price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
-        imageUrl: 'assets/images/clothing.png',
+        imageUrl: TShirt.clothing.image,
       ),
       Product(
         title: 't shirts',
         price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
-        imageUrl: 'assets/images/clothing2.png',
+        imageUrl: TShirt.clothing2.image,
       ),
       Product(
         title: 't shirts',
         price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
-        imageUrl: 'assets/images/clothing3.png',
+        imageUrl: TShirt.clothing4.image,
       ),
       Product(
         title: 'hoodie',
         price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
-        imageUrl: 'assets/images/hoodie1.png',
+        imageUrl: Hoodie.hoodie1.image,
       ),
       Product(
         title: 'hoodie',
         price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
-        imageUrl: 'assets/images/hoodie2.png',
+        imageUrl: Hoodie.hoodie4.image,
       ),
       Product(
         title: 'hoodie',
         price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
-        imageUrl: 'assets/images/hoodie3.png',
+        imageUrl: Hoodie.hoodie3.image,
       ),
     ];
 
