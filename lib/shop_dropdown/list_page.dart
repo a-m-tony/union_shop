@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class GraduationPage extends StatelessWidget {
-  const GraduationPage({super.key});
+class ListPage extends StatelessWidget {
+  const ListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Graduation'),
+        title: const Text('List'),
       ),
       body: const Center(
-        child: Text('Graduation Page'),
+        child: Text('List Page'),
       ),
     );
   }
