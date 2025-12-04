@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../header.dart';
 import '../product_card.dart';
 import '../model/product.dart';
-import '../repository/price.dart';
+import '../model/price.dart';
 import '../model/hoodie.dart';
 import '../model/sweater.dart';
 import '../model/t_shirt.dart';
@@ -12,66 +12,67 @@ class ListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cart = Cart();
-    final products = [
+    final priceMap = {for (var p in products) p.title: p.price};
+
+    final productsToShow = [
       Product(
         title: 't shirts',
-        price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
+        price: priceMap['T-Shirt']!,
         imageUrl: TShirt.clothing.image,
       ),
       Product(
         title: 'Sweater 4',
-        price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
+        price: priceMap['Sweater']!,
         imageUrl: Sweater.sweater4.image,
       ),
       Product(
         title: 'Sweater 3',
-        price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
+        price: priceMap['Sweater']!,
         imageUrl: Sweater.sweater3.image,
       ),
       Product(
         title: 'Sweater 2',
-        price: cart.items.firstWhere((p) => p.title == 'Sweater').price,
+        price: priceMap['Sweater']!,
         imageUrl: Sweater.sweater2.image,
       ),
       Product(
         title: 'hoodie',
-        price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
+        price: priceMap['Hoodie']!,
         imageUrl: Hoodie.hoodie1.image,
       ),
       Product(
         title: 't shirts',
-        price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
+        price: priceMap['T-Shirt']!,
         imageUrl: TShirt.clothing4.image,
       ),
       Product(
         title: 't shirts',
-        price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
+        price: priceMap['T-Shirt']!,
         imageUrl: TShirt.clothing.image,
       ),
       Product(
         title: 't shirts',
-        price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
+        price: priceMap['T-Shirt']!,
         imageUrl: TShirt.clothing2.image,
       ),
       Product(
         title: 't shirts',
-        price: cart.items.firstWhere((p) => p.title == 'T-Shirt').price,
+        price: priceMap['T-Shirt']!,
         imageUrl: TShirt.clothing4.image,
       ),
       Product(
         title: 'hoodie',
-        price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
+        price: priceMap['Hoodie']!,
         imageUrl: Hoodie.hoodie1.image,
       ),
       Product(
         title: 'hoodie',
-        price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
+        price: priceMap['Hoodie']!,
         imageUrl: Hoodie.hoodie4.image,
       ),
       Product(
         title: 'hoodie',
-        price: cart.items.firstWhere((p) => p.title == 'Hoodie').price,
+        price: priceMap['Hoodie']!,
         imageUrl: Hoodie.hoodie3.image,
       ),
     ];
@@ -83,11 +84,9 @@ class ListPage extends StatelessWidget {
           Expanded(
             child: GridView.count(
               crossAxisCount: 3,
-              children: products
+              children: productsToShow
                   .map((product) => ProductCard(
-                        title: product.title,
-                        price: product.price,
-                        imageUrl: product.imageUrl,
+                        product: product,
                       ))
                   .toList(),
             ),
