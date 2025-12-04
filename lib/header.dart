@@ -21,6 +21,10 @@ class Header extends StatelessWidget {
     Navigator.pushNamed(context, '/about-print-snack');
   }
 
+  void navigateToSearch(BuildContext context) {
+    Navigator.pushNamed(context, '/search');
+  }
+
   void placeholderCallbackForButtons() {
     // This is the event handler for buttons that don't work yet
   }
@@ -104,7 +108,7 @@ class Header extends StatelessWidget {
                           minWidth: 32,
                           minHeight: 32,
                         ),
-                        onPressed: placeholderCallbackForButtons,
+                        onPressed: () => navigateToSearch(context),
                       ),
                       IconButton(
                         icon: const Icon(
