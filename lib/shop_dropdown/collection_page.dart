@@ -51,6 +51,21 @@ class CollectionPage extends StatelessWidget {
                     price: '£25.00',
                     imageUrl: 'assets/images/sweater2.png',
                   ),
+                  ProductCard(
+                    title: 'hoodie',
+                    price: '£35.00',
+                    imageUrl: 'assets/images/hoodie1.png',
+                  ),
+                  ProductCard(
+                    title: 'hoodie',
+                    price: '£35.00',
+                    imageUrl: 'assets/images/hoodie3.png',
+                  ),
+                  ProductCard(
+                    title: 'hoodie',
+                    price: '£35.00',
+                    imageUrl: 'assets/images/hoodie4.png',
+                  ),
                 ],
               ),
             ),
