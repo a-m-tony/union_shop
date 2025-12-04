@@ -45,6 +45,7 @@ class _ProductPageState extends State<ProductPage> {
             ),
             ElevatedButton(
               onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
                 Navigator.pushNamed(context, '/cart');
               },
               child: const Text('Go to Cart'),
@@ -72,6 +73,17 @@ class _ProductPageState extends State<ProductPage> {
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
+                product.price,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
                 ),
               ),
             ),
@@ -157,7 +169,7 @@ class _ProductPageState extends State<ProductPage> {
                                 _showAddedToCartDialog(product);
                               }
                             : null,
-                        child: const Text('Add to Cart'),
+                        child: Text(_areOptionsSelected() ? 'Add to Cart' : 'Select options'),
                       ),
                     ],
                   ),
