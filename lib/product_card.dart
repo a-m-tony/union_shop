@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:union_shop/model/cart.dart';
+import 'package:union_shop/model/product.dart';
 
 class ProductCard extends StatelessWidget {
-  final String title;
-  final String price;
-  final String imageUrl;
+  final Product product;
 
-  const ProductCard({
-    super.key,
-    required this.title,
-    required this.price,
-    required this.imageUrl,
-  });
+  const ProductCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, '/product');
-      },
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Image.network(
-              imageUrl,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/product', arguments: product);
+            },
+            child: Image.asset(
+              product.imageUrl,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
@@ -35,24 +31,31 @@ class ProductCard extends StatelessWidget {
               },
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 4),
-              Text(
-                title,
-                style: const TextStyle(fontSize: 14, color: Colors.black),
-                maxLines: 2,
-              ),
-              const SizedBox(height: 4),
-              Text(
-                price,
-                style: const TextStyle(fontSize: 13, color: Colors.grey),
-              ),
-            ],
-          ),
-        ],
-      ),
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 4),
+            Text(
+              product.title,
+              style: const TextStyle(fontSize: 14, color: Colors.black),
+              maxLines: 2,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              product.price,
+              style: const TextStyle(fontSize: 13, color: Colors.grey),
+            ),
+            const SizedBox(height: 8),
+            ElevatedButton(
+              onPressed: () {
+                Provider.of<Cart>(context, listen: false).add(product);
+              },
+              child: const Text('Add to Cart'),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:union_shop/model/cart.dart';
+import 'package:union_shop/view/cart_view.dart';
 import 'About.dart';
 import 'shop_dropdown/product_page.dart';
 import 'sale_page.dart';
@@ -14,7 +17,12 @@ import 'model/product.dart';
 import 'view/search.dart';
 
 void main() {
-  runApp(const UnionShopApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Cart(),
+      child: const UnionShopApp(),
+    ),
+  );
 }
 
 class UnionShopApp extends StatelessWidget {
@@ -40,6 +48,7 @@ class UnionShopApp extends StatelessWidget {
         '/personalisation': (context) => const PersonalisationPage(),
         '/sale': (context) => const SalePage(),
         '/search': (context) => const SearchPage(),
+        '/cart': (context) => const CartView(),
       },
     );
   }
@@ -174,9 +183,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisSpacing: 48,
                       children: products
                           .map((product) => ProductCard(
-                                title: product.title,
-                                price: product.price,
-                                imageUrl: product.imageUrl,
+                                product: product,
                               ))
                           .toList(),
                     ),

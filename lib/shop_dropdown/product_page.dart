@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../header.dart';
+import '../model/cart.dart';
+import '../model/product.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -13,19 +16,60 @@ class _ProductPageState extends State<ProductPage> {
   String? _selectedColour;
   int? _selectedQuantity;
 
+  bool _areOptionsSelected() {
+    return _selectedSize != null &&
+        _selectedColour != null &&
+        _selectedQuantity != null;
+  }
+
+  void _showAddedToCartDialog(Product product) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Added to Cart'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Image.asset(product.imageUrl, width: 100, height: 100),
+              const SizedBox(height: 16),
+              Text(product.title, style: const TextStyle(fontWeight: FontWeight.bold)),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Continue Shopping'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cart');
+              },
+              child: const Text('Go to Cart'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final product = ModalRoute.of(context)!.settings.arguments as Product;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Header(),
-            const Padding(
-              padding: EdgeInsets.all(20.0),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Text(
-                'Products',
-                style: TextStyle(
+                product.title,
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -40,7 +84,7 @@ class _ProductPageState extends State<ProductPage> {
                     child: Card(
                       clipBehavior: Clip.antiAlias,
                       child: Image.asset(
-                        'assets/images/clothing.png',
+                        product.imageUrl,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -104,6 +148,16 @@ class _ProductPageState extends State<ProductPage> {
                             _selectedQuantity = newValue;
                           });
                         },
+                      ),
+                      const SizedBox(height: 24),
+                      ElevatedButton(
+                        onPressed: _areOptionsSelected()
+                            ? () {
+                                Provider.of<Cart>(context, listen: false).add(product);
+                                _showAddedToCartDialog(product);
+                              }
+                            : null,
+                        child: const Text('Add to Cart'),
                       ),
                     ],
                   ),

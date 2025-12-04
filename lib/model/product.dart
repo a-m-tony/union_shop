@@ -8,4 +8,8 @@ class Product {
     required this.price,
     required this.imageUrl,
   });
+
+  String? get name => null;
+
+  String? get image => null;
 }
