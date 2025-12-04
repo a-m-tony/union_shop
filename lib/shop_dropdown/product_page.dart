@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../header.dart';
-import '../product_card.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -10,49 +9,6 @@ class ProductPage extends StatefulWidget {
 }
 
 class _ProductPageState extends State<ProductPage> {
-  final products = const [
-    ProductCard(
-      title: 'Placeholder Product 1',
-      price: '£10.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 2',
-      price: '£15.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 3',
-      price: '£20.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 4',
-      price: '£25.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 5',
-      price: '£10.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 6',
-      price: '£15.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 7',
-      price: '£20.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-    ProductCard(
-      title: 'Placeholder Product 8',
-      price: '£25.00',
-      imageUrl: 'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-    ),
-  ];
-
   String? _selectedSize;
   String? _selectedColour;
   int? _selectedQuantity;
@@ -79,19 +35,15 @@ class _ProductPageState extends State<ProductPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: products.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                        child: SizedBox(
-                          height: 300,
-                          child: products[index],
-                        ),
-                      );
-                    },
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      child: Image.asset(
+                        'assets/images/clothing.png',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
                 Container(
