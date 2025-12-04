@@ -53,9 +53,9 @@ class _ProductPageState extends State<ProductPage> {
     ),
   ];
 
-  String? _selectedOption1;
-  String? _selectedOption2;
-  String? _selectedOption3;
+  String? _selectedSize;
+  String? _selectedColour;
+  int? _selectedQuantity;
 
   @override
   Widget build(BuildContext context) {
@@ -104,10 +104,10 @@ class _ProductPageState extends State<ProductPage> {
                       const Text('Options', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 16),
                       DropdownButton<String>(
-                        value: _selectedOption1,
-                        hint: const Text('Dropdown 1'),
+                        value: _selectedSize,
+                        hint: const Text('Size'),
                         isExpanded: true,
-                        items: ['Option A', 'Option B', 'Option C']
+                        items: ['small', 'medium', 'Large']
                             .map((String value) => DropdownMenuItem<String>(
                                   value: value,
                                   child: Text(value),
@@ -115,16 +115,16 @@ class _ProductPageState extends State<ProductPage> {
                             .toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            _selectedOption1 = newValue;
+                            _selectedSize = newValue;
                           });
                         },
                       ),
                       const SizedBox(height: 16),
                       DropdownButton<String>(
-                        value: _selectedOption2,
-                        hint: const Text('Dropdown 2'),
+                        value: _selectedColour,
+                        hint: const Text('Colour'),
                         isExpanded: true,
-                        items: ['Option D', 'Option E', 'Option F']
+                        items: ['red', 'white', 'black']
                             .map((String value) => DropdownMenuItem<String>(
                                   value: value,
                                   child: Text(value),
@@ -132,24 +132,24 @@ class _ProductPageState extends State<ProductPage> {
                             .toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            _selectedOption2 = newValue;
+                            _selectedColour = newValue;
                           });
                         },
                       ),
                       const SizedBox(height: 16),
-                      DropdownButton<String>(
-                        value: _selectedOption3,
-                        hint: const Text('Dropdown 3'),
+                      DropdownButton<int>(
+                        value: _selectedQuantity,
+                        hint: const Text('Quantity'),
                         isExpanded: true,
-                        items: ['Option G', 'Option H', 'Option I']
-                            .map((String value) => DropdownMenuItem<String>(
+                        items: List<int>.generate(10, (i) => i + 1)
+                            .map((int value) => DropdownMenuItem<int>(
                                   value: value,
-                                  child: Text(value),
+                                  child: Text(value.toString()),
                                 ))
                             .toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            _selectedOption3 = newValue;
+                            _selectedQuantity = newValue;
                           });
                         },
                       ),
