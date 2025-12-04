@@ -20,7 +20,13 @@ class CollectionPage extends StatelessWidget {
                 crossAxisCount: 3,
                 crossAxisSpacing: 24,
                 mainAxisSpacing: 48,
-                children: const [],
+                children: const [
+                  ProductCard(
+                    title: 'Clothing',
+                    price: '£10.00',
+                    imageUrl: 'assets/images/clothing.png',
+                  ),
+                ],
               ),
             ),
           ],
