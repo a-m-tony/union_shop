@@ -11,6 +11,7 @@ import 'header.dart';
 import 'shop_dropdown/Personalisation.dart';
 import 'product_card.dart';
 import 'model/product.dart';
+import 'view/search.dart';
 
 void main() {
   runApp(const UnionShopApp());
@@ -38,6 +39,7 @@ class UnionShopApp extends StatelessWidget {
         '/about-print-snack': (context) => const AboutPrintSnackPage(),
         '/personalisation': (context) => const PersonalisationPage(),
         '/sale': (context) => const SalePage(),
+        '/search': (context) => const SearchPage(),
       },
     );
   }
@@ -182,133 +184,140 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              width: double.infinity,
+            Material(
               color: Colors.grey[50],
-              padding: const EdgeInsets.all(24),
-              child: const Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Opening Hours',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(24),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Opening Hours',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        '❄️ Winter Break Closure ❄️',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
+                        SizedBox(height: 8),
+                        Text(
+                          '❄️ Winter Break Closure ❄️',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            fontStyle: FontStyle.italic,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'Closing 4pm 19/12/2025',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          'Closing 4pm 19/12/2025',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'Reopening 10am 5/01/2026',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          'Reopening 10am 5/01/2026',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'Last post date: 12 pm on 18/12/2025',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          'Last post date: 12 pm on 18/12/2025',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        '-----------------------',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          '-----------------------',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        '(Term Time)',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          '(Term Time)',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        'Monday - Friday 10am - 4pm',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          'Monday - Friday 10am - 4pm',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        '(Outside of Term Time / Consolidation Weeks)',
-                        style: TextStyle(
-                          fontSize: 12,
+                        SizedBox(height: 8),
+                        Text(
+                          '(Outside of Term Time / Consolidation Weeks)',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Monday - Friday 10am - 3pm',
-                        style: TextStyle(
-                          fontSize: 12,
+                        Text(
+                          'Monday - Friday 10am - 3pm',
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                                            Text(
-                        ' Purchase online 24/7',
-                        style: const TextStyle(
-                          fontSize: 12,
+                                              Text(
+                          ' Purchase online 24/7',
+                          style: const TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(width: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Help and Information',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                      ],
+                    ),
+                    const SizedBox(width: 20),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Help and Information',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height:.8),
-                      Text('Search', style: const TextStyle(fontSize: 12)),
-                      SizedBox(height: 8),
-                      Text('Delivery Information', style: const TextStyle(fontSize: 12)),
-                      SizedBox(height: 8),
-                      Text('Returns and Refunds', style: const TextStyle(fontSize: 12)),
-                      SizedBox(height: 8),
-                      Text('FAQs', style: const TextStyle(fontSize: 12)),
-                    ],
-                  ),
-                  SizedBox(width: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Latest Offers',
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold,
+                        const SizedBox(height:.8),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/search');
+                          },
+                          child: const Text('Search', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text('Check out our latest deals!', style: const TextStyle(fontSize: 12)),
-                    ],
-                  ),
-                  Spacer(),
-                ],
+                        const SizedBox(height: 8),
+                        const Text('Delivery Information', style: TextStyle(fontSize: 12)),
+                        const SizedBox(height: 8),
+                        const Text('Returns and Refunds', style: TextStyle(fontSize: 12)),
+                        const SizedBox(height: 8),
+                        const Text('FAQs', style: TextStyle(fontSize: 12)),
+                      ],
+                    ),
+                    const SizedBox(width: 20),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Latest Offers',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text('Check out our latest deals!', style: TextStyle(fontSize: 12)),
+                      ],
+                    ),
+                    const Spacer(),
+                  ],
+                ),
               ),
             ),
           ],
