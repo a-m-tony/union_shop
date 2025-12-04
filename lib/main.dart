@@ -4,7 +4,7 @@ import 'package:union_shop/shop_dropdown/product_page.dart';
 import 'package:union_shop/sale_page.dart';
 import 'package:union_shop/shop_dropdown/clothing_page.dart';
 import 'package:union_shop/shop_dropdown/graduation_page.dart';
-import 'package:union_shop/shop_dropdown/halloween_page.dart';
+import 'package:union_shop/shop_dropdown/collection_page.dart';
 import 'package:union_shop/shop_dropdown/portsmouth_collection_page.dart';
 import 'package:union_shop/shop_dropdown/pride_collection_page.dart';
 import 'package:union_shop/shop_dropdown/shop_menu.dart';
@@ -34,7 +34,7 @@ class UnionShopApp extends StatelessWidget {
         '/product': (context) => const ProductPage(),
         '/about': (context) => const AboutUsPage(),
         '/clothing': (context) => const ClothingPage(),
-        '/halloween': (context) => const HalloweenPage(),
+        '/collection': (context) => const CollectionPage(),
         '/signal-essentials': (context) => const SignalEssentialsPage(),
         '/portsmouth-collection': (context) => const PortsmouthCollectionPage(),
         '/pride-collection': (context) => const PrideCollectionPage(),
