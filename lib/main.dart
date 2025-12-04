@@ -3,7 +3,7 @@ import 'About.dart';
 import 'shop_dropdown/product_page.dart';
 import 'sale_page.dart';
 import 'shop_dropdown/clothing_page.dart';
-import 'shop_dropdown/graduation_page.dart';
+import 'shop_dropdown/list_page.dart';
 import 'shop_dropdown/collection_page.dart';
 import 'shop_dropdown/shop_menu.dart';
 import 'about_us_page.dart';
@@ -35,7 +35,7 @@ class UnionShopApp extends StatelessWidget {
         '/about': (context) => const AboutUsPage(),
         '/clothing': (context) => const ClothingPage(),
         '/collection': (context) => const CollectionPage(),
-        '/graduation': (context) => const GraduationPage(),
+        '/list': (context) => const ListPage(),
         '/about-print-snack': (context) => const AboutPrintSnackPage(),
         '/personalisation': (context) => const PersonalisationPage(),
         '/sale': (context) => const SalePage(),
