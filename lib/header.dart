@@ -48,6 +48,7 @@ class Header extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -70,28 +71,24 @@ class Header extends StatelessWidget {
                       },
                     ),
                   ),
-                  Expanded(
-                    child: Wrap(
-                      alignment: WrapAlignment.center,
-                      spacing: 10.0,
-                      runSpacing: 4.0,
-                      children: [
-                        TextButton(
-                          onPressed: () => navigateToHome(context),
-                          child: const Text('Home'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: () => navigateToHome(context),
+                        child: const Text('Home'),
+                      ),
+                      const ShopMenu(),
+                      const PrintSnackMenu(),
+                      TextButton(
+                        onPressed: () => navigateToSale(context),
+                        child: const Text('Sale'),
+                      ),
+                      TextButton(
+                        onPressed: () => navigateToAboutUs(context),
+                        child: const Text('About'),
                         ),
-                        const ShopMenu(),
-                        const PrintSnackMenu(),
-                        TextButton(
-                          onPressed: () => navigateToSale(context),
-                          child: const Text('Sale'),
-                        ),
-                        TextButton(
-                          onPressed: () => navigateToAboutUs(context),
-                          child: const Text('About'),
-                        ),
-                      ],
-                    ),
+                    ],
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.min,
