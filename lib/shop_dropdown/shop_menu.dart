@@ -14,8 +14,8 @@ class ShopMenu extends StatelessWidget {
           case 'Product':
             Navigator.pushNamed(context, '/product');
             break;
-          case 'Halloween':
-            Navigator.pushNamed(context, '/halloween');
+          case 'Collection':
+            Navigator.pushNamed(context, '/collection');
             break;
           case 'Signal & Essential Range':
             Navigator.pushNamed(context, '/signal-essentials');
@@ -44,8 +44,8 @@ class ShopMenu extends StatelessWidget {
           child: Text('Product'),
         ),
         const PopupMenuItem<String>(
-          value: 'Halloween',
-          child: Text('Halloween'),
+          value: 'Collection',
+          child: Text('Collection'),
         ),
         const PopupMenuItem<String>(
           value: 'Signal & Essential Range',
