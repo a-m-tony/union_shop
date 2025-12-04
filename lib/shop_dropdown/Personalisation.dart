@@ -9,6 +9,8 @@ class PersonalisationPage extends StatefulWidget {
 }
 
 class _PersonalisationPageState extends State<PersonalisationPage> {
+  String dropdownValue = 'one line of text';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,20 +30,36 @@ class _PersonalisationPageState extends State<PersonalisationPage> {
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
+                      children: [
+                        const Text(
                           'Personalisation Options',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 16),
-                        TextField(
+                        const SizedBox(height: 16),
+                        const TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'Enter personalisation text',
                           ),
+                        ),
+                        const SizedBox(height: 16),
+                        DropdownButton<String>(
+                          value: dropdownValue,
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownValue = newValue!;
+                            });
+                          },
+                          items: <String>['one line of text', 'two lines of text', 'three line of text']
+                              .map<DropdownMenuItem<String>>((String value) {
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(value),
+                            );
+                          }).toList(),
                         ),
                       ],
                     ),
