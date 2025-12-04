@@ -61,6 +61,13 @@ class _PersonalisationPageState extends State<PersonalisationPage> {
                             );
                           }).toList(),
                         ),
+                        const SizedBox(height: 16),
+                        ElevatedButton(
+                          onPressed: () {
+                            // TODO: Implement Add to Cart functionality
+                          },
+                          child: const Text('Add to Cart'),
+                        ),
                       ],
                     ),
                   ),
