@@ -15,10 +15,6 @@ import 'shop_dropdown/Personalisation.dart';
 import 'product_card.dart';
 import 'model/product.dart';
 import 'view/search.dart';
-import 'package:union_shop/model/hoodie.dart';
-import 'package:union_shop/model/sweater.dart';
-import 'package:union_shop/model/t_shirt.dart';
-import 'package:union_shop/model/price.dart';
 
 void main() {
   runApp(
@@ -60,6 +56,10 @@ class UnionShopApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  
+  String? get imageUrl => null;
+  
+  
 
   void navigateToHome(BuildContext context) {
     Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
@@ -75,29 +75,28 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     
+  
     const products = [
       Product(
-        title: 'Placeholder Product 1',
-        price: '£10.00',
+        title: 'sweater',
+        price: '£25.00',
         imageUrl: 'assets/images/sweater1.png',
       ),
       Product(
-        title: 'Placeholder Product 2',
+        title: 't shirts',
+        price: '£10.00',
+        imageUrl: 'assets/images/clothing.png',
+      ),
+      Product(
+          title: 'sweater',
+        price: '£35.00',
+        imageUrl: 'assets/images/sweater3.png',
+      ),
+      Product(
+          title: 'hat',
         price: '£15.00',
-        imageUrl:
-            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-      ),
-      Product(
-        title: 'Placeholder Product 3',
-        price: '£20.00',
-        imageUrl:
-            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
-      ),
-      Product(
-        title: 'Placeholder Product 4',
-        price: '£25.00',
-        imageUrl:
-            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+        imageUrl: 'assets/images/hat1.png',
       ),
     ];
 
@@ -115,8 +114,8 @@ class HomeScreen extends StatelessWidget {
                     child: Container(
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(
-                            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityPostcard2_1024x1024@2x.jpg?v=1752232561',
+                          image: AssetImage(
+                            'assets/images/sweater3.png',
                           ),
                           fit: BoxFit.cover,
                         ),
