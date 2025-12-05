@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:union_shop/model/cart.dart';
 import 'package:union_shop/model/product.dart';
+import 'package:union_shop/repository/price_repository.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -10,6 +11,8 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final price = PriceRepository.getPrice(product.title) ?? '';
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -43,7 +46,7 @@ class ProductCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              product.price,
+              price,
               style: const TextStyle(fontSize: 13, color: Colors.grey),
             ),
             const SizedBox(height: 8),
