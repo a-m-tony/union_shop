@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:union_shop/model/cart.dart';
 import 'package:union_shop/model/product.dart';
+import 'package:union_shop/repository/price_repository.dart';
 import 'header.dart';
 
 class SalePage extends StatelessWidget {
@@ -12,18 +13,15 @@ class SalePage extends StatelessWidget {
     const saleProducts = [
       Product(
         title: 'Clothing 5',
-        price: '£25.30',
-        imageUrl: 'assets/images/clothing5.png',
+        imageUrl: 'assets/images/clothing5.png', price: '',
       ),
       Product(
         title: 'Clothing 6',
-        price: '£170.99',
-        imageUrl: 'assets/images/clothing6.png',
+        imageUrl: 'assets/images/clothing6.png', price: '',
       ),
       Product(
         title: 'Clothing 7',
-        price: '£15.00',
-        imageUrl: 'assets/images/clothing7.png',
+        imageUrl: 'assets/images/clothing7.png', price: '',
       ),
     ];
 
@@ -54,6 +52,7 @@ class SalePage extends StatelessWidget {
               crossAxisCount: 3,
               children: List.generate(saleProducts.length, (index) {
                 final product = saleProducts[index];
+                final price = PriceRepository.getPrice(product.title) ?? '';
                 final originalPrice = originalPrices[index];
                 return Card(
                   clipBehavior: Clip.antiAlias,
@@ -72,7 +71,7 @@ class SalePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              product.price,
+                              price,
                               style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                             const SizedBox(width: 8.0),

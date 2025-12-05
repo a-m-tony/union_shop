@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../header.dart';
 import '../model/cart.dart';
 import '../model/product.dart';
+import '../repository/price_repository.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -59,6 +60,7 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     final product = ModalRoute.of(context)!.settings.arguments as Product;
+    final price = PriceRepository.getPrice(product.title) ?? '';
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -79,7 +81,7 @@ class _ProductPageState extends State<ProductPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
-                product.price,
+                price,
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

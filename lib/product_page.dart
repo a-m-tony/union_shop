@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:union_shop/header.dart';
 import 'package:union_shop/model/cart.dart';
 import 'package:union_shop/model/product.dart';
+import 'package:union_shop/repository/price_repository.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});
@@ -55,12 +56,8 @@ class _ProductPageState extends State<ProductPage> {
 
   @override
   Widget build(BuildContext context) {
-    const product = Product(
-      title: 'Classic Sweatshirt',
-      price: '£25.00',
-      imageUrl: 'assets/images/sweater3.png',
-      description: 'A classic sweatshirt for all occasions.',
-    );
+    final product = ModalRoute.of(context)!.settings.arguments as Product;
+    final price = PriceRepository.getPrice(product.title) ?? '';
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -87,7 +84,7 @@ class _ProductPageState extends State<ProductPage> {
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          product.price,
+                          price,
                           style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:union_shop/repository/price_repository.dart';
 import 'product.dart';
 
 class Cart extends ChangeNotifier {
@@ -17,6 +18,9 @@ class Cart extends ChangeNotifier {
   }
 
   double get totalPrice {
-    return _items.fold(0.0, (sum, current) => sum + double.parse(current.price.substring(1)));
+    return _items.fold(0.0, (sum, current) {
+      final priceString = PriceRepository.getPrice(current.title) ?? '£0.0';
+      return sum + double.parse(priceString.substring(1));
+    });
   }
 }

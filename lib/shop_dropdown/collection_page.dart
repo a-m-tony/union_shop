@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:union_shop/header.dart';
-import 'package:union_shop/product_card.dart';
-import 'package:union_shop/model/price.dart';
+import '../header.dart';
+import '../product_card.dart';
+import '../repository/product_repository.dart';
 
 class CollectionPage extends StatelessWidget {
   const CollectionPage({super.key});
