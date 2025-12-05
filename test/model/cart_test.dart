@@ -9,6 +9,7 @@ void main() {
       final product = Product(
         title: 't shirts',
         imageUrl: 'assets/images/t-shirt.png',
+        price: '£10.00',
       );
       cart.add(product);
       expect(cart.items.contains(product), isTrue);
@@ -19,6 +20,7 @@ void main() {
       final product = Product(
         title: 't shirts',
         imageUrl: 'assets/images/t-shirt.png',
+        price: '£10.00',
       );
       cart.add(product);
       cart.remove(product);
@@ -30,10 +32,12 @@ void main() {
       final product1 = Product(
         title: 't shirts',
         imageUrl: 'assets/images/t-shirt.png',
+        price: '£10.00',
       );
       final product2 = Product(
         title: 'sweater',
         imageUrl: 'assets/images/sweater.png',
+        price: '£35.00',
       );
       cart.add(product1);
       cart.add(product2);
