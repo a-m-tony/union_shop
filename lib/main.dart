@@ -15,6 +15,9 @@ import 'shop_dropdown/Personalisation.dart';
 import 'product_card.dart';
 import 'model/product.dart';
 import 'view/search.dart';
+import 'package:union_shop/model/hoodie.dart';
+import 'package:union_shop/model/sweater.dart';
+import 'package:union_shop/model/t_shirt.dart';
 
 void main() {
   runApp(
@@ -75,8 +78,7 @@ class HomeScreen extends StatelessWidget {
       Product(
         title: 'Placeholder Product 1',
         price: '£10.00',
-        imageUrl:
-            'https://shop.upsu.net/cdn/shop/files/PortsmouthCityMagnet1_1024x1024@2x.jpg?v=1752230282',
+        imageUrl: 'assets/images/sweater1.png',
       ),
       Product(
         title: 'Placeholder Product 2',
