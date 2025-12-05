@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:union_shop/model/cart.dart';
+import 'package:union_shop/model/product.dart';
 import 'header.dart';
 
 class SalePage extends StatelessWidget {
@@ -6,6 +9,30 @@ class SalePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const saleProducts = [
+      Product(
+        title: 'Clothing 5',
+        price: '£25.30',
+        imageUrl: 'assets/images/clothing5.png',
+      ),
+      Product(
+        title: 'Clothing 6',
+        price: '£170.99',
+        imageUrl: 'assets/images/clothing6.png',
+      ),
+      Product(
+        title: 'Clothing 7',
+        price: '£15.00',
+        imageUrl: 'assets/images/clothing7.png',
+      ),
+    ];
+
+    const originalPrices = [
+      '£30',
+      '£200',
+      '£20',
+    ];
+
     return Scaffold(
       body: Column(
         children: [
@@ -25,15 +52,17 @@ class SalePage extends StatelessWidget {
           Expanded(
             child: GridView.count(
               crossAxisCount: 3,
-              children: [
-                Card(
+              children: List.generate(saleProducts.length, (index) {
+                final product = saleProducts[index];
+                final originalPrice = originalPrices[index];
+                return Card(
                   clipBehavior: Clip.antiAlias,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Expanded(
                         child: Image.asset(
-                          'assets/images/clothing5.png',
+                          product.imageUrl,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -41,94 +70,36 @@ class SalePage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
-                              '£25.30',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              product.price,
+                              style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
-                            SizedBox(width: 8.0),
+                            const SizedBox(width: 8.0),
                             Text(
-                              '£30',
-                              style: TextStyle(
+                              originalPrice,
+                              style: const TextStyle(
                                 decoration: TextDecoration.lineThrough,
                                 color: Colors.grey,
                               ),
                             ),
                           ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Card(
-                  clipBehavior: Clip.antiAlias,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                        child: Image.asset(
-                          'assets/images/clothing6.png',
-                          fit: BoxFit.cover,
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Text(
-                              '£170.99',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(width: 8.0),
-                            Text(
-                              '£200',
-                              style: TextStyle(
-                                decoration: TextDecoration.lineThrough,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
+                        padding: const EdgeInsets.fromLTRB(8.0, 0, 8.0, 8.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Provider.of<Cart>(context, listen: false).add(product);
+                            Navigator.pushNamed(context, '/cart');
+                          },
+                          child: const Text('Add to Cart'),
                         ),
                       ),
                     ],
                   ),
-                ),
-                Card(
-                  clipBehavior: Clip.antiAlias,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                        child: Image.asset(
-                          'assets/images/clothing7.png',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Text(
-                              '£15.00',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(width: 8.0),
-                            Text(
-                              '£20',
-                              style: TextStyle(
-                                decoration: TextDecoration.lineThrough,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                );
+              }),
             ),
           ),
         ],
