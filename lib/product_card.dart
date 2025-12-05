@@ -50,6 +50,7 @@ class ProductCard extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Provider.of<Cart>(context, listen: false).add(product);
+                Navigator.pushNamed(context, '/cart');
               },
               child: const Text('Add to Cart'),
             ),
