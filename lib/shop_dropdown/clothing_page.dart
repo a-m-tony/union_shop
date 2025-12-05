@@ -27,11 +27,14 @@ class ClothingPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/clothing3.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/collection'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/clothing3.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       GestureDetector(
@@ -50,18 +53,24 @@ class ClothingPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: [
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/clothing2.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/list'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/clothing2.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/sweater3.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/collection'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/sweater3.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       GestureDetector(
@@ -80,25 +89,34 @@ class ClothingPage extends StatelessWidget {
                 Expanded(
                   child: Column(
                     children: [
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/clothing4.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/list'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/clothing4.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/clothing4.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/collection'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/clothing4.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                      Card(
-                        clipBehavior: Clip.antiAlias,
-                        child: Image.asset(
-                          'assets/images/hoodie1.png',
-                          fit: BoxFit.cover,
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/list'),
+                        child: Card(
+                          clipBehavior: Clip.antiAlias,
+                          child: Image.asset(
+                            'assets/images/hoodie1.png',
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ],
