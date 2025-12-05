@@ -18,6 +18,7 @@ import 'view/search.dart';
 import 'package:union_shop/model/hoodie.dart';
 import 'package:union_shop/model/sweater.dart';
 import 'package:union_shop/model/t_shirt.dart';
+import 'package:union_shop/model/price.dart';
 
 void main() {
   runApp(
