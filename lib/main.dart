@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:union_shop/model/cart.dart';
 import 'package:union_shop/view/cart_view.dart';
 import 'About.dart';
-import 'shop_dropdown/product_page.dart';
+import 'product_page.dart';
 import 'sale_page.dart';
 import 'shop_dropdown/clothing_page.dart';
 import 'shop_dropdown/list_page.dart';
